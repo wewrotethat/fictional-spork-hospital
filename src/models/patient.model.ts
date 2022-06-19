@@ -4,6 +4,13 @@ import {Entity, model, property} from '@loopback/repository';
 export class Patient extends Entity {
   @property({
     type: 'string',
+    id: true,
+    generated: true,
+  })
+  id: string;
+
+  @property({
+    type: 'string',
     required: true,
   })
   firstName: string;
